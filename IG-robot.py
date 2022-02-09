@@ -13,6 +13,7 @@ class AbdullahCoder():
         self.headers = {"Host": "www.instagram.com","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br","Referer": "https://www.instagram.com/accounts/edit/","X-IG-App-ID": "936619743392459","X-Requested-With": "XMLHttpRequest","DNT": "1","Connection": "keep-alive",}
         self.pcnm = int(input('Number of photos: '))
         self.X = int(input('Sleep : '))
+        self.extension = input("photo extension [png,jpg] : ")
       
         if self.AddCH() == False:
             self.login()
@@ -56,7 +57,7 @@ class AbdullahCoder():
 
     def change(self,n):
         try:
-            with open("imgs/photo"+str(n)+".jpg", "rb") as resp:
+            with open("imgs/photo"+str(n)+"."+self.extension, "rb") as resp:
                 f = resp.read()
             p_pic = bytes(f)
             p_pic_s = len(f)
