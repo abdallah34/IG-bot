@@ -2,7 +2,7 @@ from time import sleep
 import requests
 import json
 
-class IG():
+class AbdullahCoder():
     def __init__(self):
         self.hosturl = "https://www.instagram.com/"
         self.loginurl = "https://www.instagram.com/accounts/login/ajax/"
@@ -72,4 +72,4 @@ class IG():
             print(e)
             sleep(10)
 
-IG()
+AbdullahCoder()
